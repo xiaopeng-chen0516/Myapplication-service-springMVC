@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dao.DetectionMapper">
+<select id="query" resultType="cn.entity.Detection">
+    SELECT *FROM detection WHERE id=(SELECT MAX(id) FROM detection)
+</select>
+
+    <select id="query7day" resultType="cn.entity.Detection">
+        SELECT * FROM detection WHERE <![CDATA[ DATE_SUB(CURDATE(), INTERVAL 7 DAY)   <= DATE(`date`) ]]>
+
+    </select>
+
+</mapper>
