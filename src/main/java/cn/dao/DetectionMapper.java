@@ -7,4 +7,5 @@ import java.util.List;
 public interface DetectionMapper {
     List<Detection> query();
     List<Detection> query7day();
+    List query7O2();
 }

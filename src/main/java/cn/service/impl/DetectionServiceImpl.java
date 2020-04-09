@@ -28,4 +28,9 @@ private DetectionMapper detectionMapper;
     public List<Detection> query7day() {
         return detectionMapper.query7day();
     }
+
+    @Override
+    public List query7O2() {
+        return detectionMapper.query7O2();
+    }
 }

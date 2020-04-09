@@ -29,4 +29,10 @@ public class DetectionController {
         return detectionService.query7day();
     }
 
+    @RequestMapping("/query7O2")
+    public List<Detection> query7O2(){
+        System.out.println("query7O2"+detectionService.query7day());
+        return detectionService.query7O2();
+    }
+
 }

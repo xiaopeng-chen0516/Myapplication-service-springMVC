@@ -9,7 +9,11 @@
 
     <select id="query7day" resultType="cn.entity.Detection">
         SELECT * FROM detection WHERE <![CDATA[ DATE_SUB(CURDATE(), INTERVAL 7 DAY)   <= DATE(`date`) ]]>
+    </select>
 
+
+    <select id="query7O2" resultType="java.lang.String">
+        SELECT o2 FROM detection WHERE <![CDATA[ DATE_SUB(CURDATE(), INTERVAL 7 DAY)   <= DATE(`date`) ]]>
     </select>
 
 </mapper>
